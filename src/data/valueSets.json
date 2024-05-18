@@ -1,0 +1,12 @@
+[
+  {
+    "value_set_id": "100165",
+    "value_set_name": "ERX GENERAL BETA BLOCKERS PQRS MEASURE 7,8",
+    "medications": "716|717|718"
+  },
+  {
+    "value_set_id": "100166",
+    "value_set_name": "ERX EXTENDED BETA BLOCKERS PQRS MEASURE 9,10",
+    "medications": "1037|1048|1916"
+  }
+]
