@@ -1,46 +1,47 @@
 import React, {useState, useEffect} from 'react';
-import axios from "axios";
+import {fetchValueSets} from "../apiService.ts";
 
 interface Props {
     searchQuery: string;
 }
 
-const ValueSetList: React.FC<Props> = ({searchQuery}) => {
-    const [sets, setSets] = useState<any[]>([]);
-    const [filteredSets, setFilteredSets] = useState<any[]>([]);
+interface ValueSet {
+    id: number;
+    name: string;
+    medications: string;
+}
 
-    // Fetch data from API on component mount and when searchQuery changes
+const ValueSetList: React.FC<Props> = ({searchQuery}) => {
+    const [sets, setSets] = useState<ValueSet[]>([]);
+    const [filteredSets, setFilteredSets] = useState<ValueSet[]>([]);
+
     useEffect(() => {
-        axios.get('https://10.0.0.193:7252/ValueSet')
+        fetchValueSets()
             .then(response => {
                 setSets(response.data);
-                setFilteredSets(response.data);
-                console.log('Value sets fetched:', response.data);
-                console.log('Search query:', searchQuery);
             })
-            .catch(error => console.error('Error fetching value sets', error));
-    }, [searchQuery]);  // Dependency array includes searchQuery to refetch when it changes, if needed
-
-    // Filter sets when searchQuery or sets change
+            .catch(error => {
+                console.error('Failed to fetch value sets:', error);
+                setSets([]);
+            });
+    }, []);
+    // Filter sets when searchQuery changes
     useEffect(() => {
-        if (searchQuery) {
-            const filtered = sets.filter(set =>
-                set.value_set_name.toLowerCase().includes(searchQuery.toLowerCase())
-            );
-            setFilteredSets(filtered);
-        } else {
-            setFilteredSets(sets);
-        }
+        const filtered = sets.filter(set =>
+            set.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        setFilteredSets(filtered);
     }, [searchQuery, sets]);
 
     return (
         <div>
             <h2>Value Sets</h2>
-            {filteredSets.map((set: any) => (
-                <div key={set.value_set_id}>
-                    {set.value_set_name}
+            {filteredSets.map((set, index) => (
+                <div key={`${set.id}-${index}`}>
+                    {set.name}
                 </div>
             ))}
+
         </div>
     );
 };
