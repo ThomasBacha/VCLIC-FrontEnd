@@ -68,9 +68,17 @@ export const compareValueSets = (valueSetIds: string[]) => {
     });
 }
 
+export const getFullJoin = () => {
+    return api.get('ValueSets/full-join');
+
+
+}
+
 // Define the ValueSetDto type
 export interface ValueSetDto {
     valueSetId?: string;
     valueSetName?: string;
     medications?: number[];
 }
+
+

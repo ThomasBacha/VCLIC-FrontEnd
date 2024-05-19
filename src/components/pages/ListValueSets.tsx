@@ -1,13 +1,8 @@
-// src/pages/ListValueSets.tsx
 import React, {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {fetchValueSets} from '../apiService';
-
-interface ValueSet {
-    valueSetId: string;
-    valueSetName: string;
-    medications: number[];
-}
+import {fetchValueSets} from '../../services/ApiService';
+import '../css/ListValueSets.css';
+import {ValueSet} from '../../interface/ValueSet.interface.ts';
 
 const ListValueSets: React.FC = () => {
     const [valueSets, setValueSets] = useState<ValueSet[]>([]);
@@ -27,7 +22,7 @@ const ListValueSets: React.FC = () => {
     }, []);
 
     return (
-        <div>
+        <div className="container">
             <h2>Beta Blocker Value Sets</h2>
             <ul>
                 {valueSets.map((vs) => (
@@ -36,7 +31,7 @@ const ListValueSets: React.FC = () => {
                     </li>
                 ))}
             </ul>
-            <button onClick={() => navigate('/select-value-sets')}>
+            <button onClick={() => navigate('/compare')}>
                 Compare Value Sets
             </button>
         </div>

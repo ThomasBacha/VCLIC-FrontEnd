@@ -1,6 +1,6 @@
 // src/pages/UploadFiles.tsx
 import React, {useState} from 'react';
-import {uploadBetaBlockerValues, uploadMedications} from '../apiService.ts'
+import {uploadBetaBlockerValues, uploadMedications} from '../../services/ApiService.ts'
 
 const UploadFiles: React.FC = () => {
     const [betaBlockerFile, setBetaBlockerFile] = useState<File | null>(null);

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {fetchValueSets} from "../apiService.ts";
+import {fetchValueSets} from "../../services/ApiService.ts";
 
 interface Props {
     searchQuery: string;

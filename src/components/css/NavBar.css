@@ -1,24 +1,52 @@
-/* src/components/NavBar.css */
+/* src/css/NavBar.css */
 nav {
     background-color: #333;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
+    padding: 5px; /* Minimal padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it is above other content */
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-nav ul li {
-    display: inline;
+.nav-buttons {
+    display: flex;
+    gap: 10px; /* Gap between buttons */
+    align-items: center; /* Align items vertically */
 }
 
-nav ul li a {
+.nav-buttons button {
+    background: none;
+    border: none;
     color: white;
+    cursor: pointer;
+    font-size: 0.875rem; /* Adjusted font size for better readability */
     text-decoration: none;
+    padding: 8px 15px; /* Slightly increased padding */
+    line-height: 1.2; /* Adjusted line height */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px; /* Rounded corners for better appearance */
+    font-family: 'Inter', sans-serif; /* Custom font for better aesthetics */
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.nav-buttons button:hover {
+    color: #FFD700; /* Vanderbilt Gold */
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.nav-buttons button:active {
+    transform: translateY(1px); /* Slight press effect on click */
+}
+
+.nav-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5); /* Focus ring for accessibility */
+}
+
+.nav-buttons button.active {
+    background-color: rgba(255, 215, 0, 0.2); /* Active state background */
 }
