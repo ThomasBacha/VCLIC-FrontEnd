@@ -2,22 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getValueSetDetails } from '../../services/ApiService.ts';
-
-interface Medication {
-  medicationId: number;
-  medName: string;
-  simpleGenericName: string;
-  route: string;
-  outpatients: number;
-  inpatients: number;
-  patients: number;
-}
-
-interface ValueSetDetails {
-  valueSetId: string;
-  valueSetName: string;
-  medications: Medication[];
-}
+import { ValueSetDetails } from '../../interface/ValueSetDetails.interface.ts';
 
 const ViewValueSet: React.FC = () => {
   const { id } = useParams<{ id: string }>();

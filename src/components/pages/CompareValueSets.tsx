@@ -3,26 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { compareValueSets, fetchValueSets } from '../../services/ApiService';
 import '../css/CompareValueSets.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
+import { ComparisonResult } from '../../interface/ComparisonResult.interface';
+import { ValueSet } from '../../interface/ValueSet.interface';
 
-interface Medication {
-    medicationId: number;
-    medName: string;
-    simpleGenericName: string;
-    route: string;
-    outpatients: number;
-    inpatients: number;
-    patients: number;
-}
-
-interface ValueSet {
-    valueSetId: string;
-    valueSetName: string;
-}
-
-interface ComparisonResult {
-    commonMedications: Medication[];
-    uniqueMedications: Record<string, Medication[]>;
-}
 
 const CompareValueSets: React.FC = () => {
     const [valueSets, setValueSets] = useState<ValueSet[]>([]);

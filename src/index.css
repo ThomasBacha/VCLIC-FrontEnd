@@ -1,4 +1,3 @@
-/* src/index.css */
 :root {
     --primary-color: #003057;
     --secondary-color: #D4AF37;
@@ -30,6 +29,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: var(--background-gradient);
+    transition: background var(--transition-duration) ease-in-out;
 }
 
 body {
@@ -39,9 +40,12 @@ body {
     justify-content: flex-start;
     min-width: 320px;
     min-height: 100vh;
-    background: var(--background-gradient);
-    transition: background var(--transition-duration) ease-in-out;
     padding-top: 60px; /* Adjust this value based on the height of your nav */
+}
+
+#root {
+    width: 100%;
+    flex: 1;
 }
 
 a {

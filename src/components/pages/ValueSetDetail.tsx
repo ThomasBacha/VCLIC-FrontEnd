@@ -1,8 +1,5 @@
 import React from 'react';
-
-interface Props {
-  valueSet: any;
-}
+import {Props} from "../../interface/Props.interface.ts";
 
 const ValueSetDetail: React.FC<Props> = ({ valueSet }) => {
   if (!valueSet) return <div>Select a value set to see details.</div>;
