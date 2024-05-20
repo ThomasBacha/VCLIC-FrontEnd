@@ -111,12 +111,12 @@ const FullJoinTable: React.FC = () => {
                             <td>{row.valueSetId}</td>
                             <td>{row.valueSetName}</td>
                             <td>{row.medicationId}</td>
-                            <td>{row.medication?.medName || 'N/A'}</td>
-                            <td>{row.medication?.simpleGenericName || 'N/A'}</td>
-                            <td>{row.medication?.route || 'N/A'}</td>
-                            <td>{row.medication?.outpatients || 'N/A'}</td>
-                            <td>{row.medication?.inpatients || 'N/A'}</td>
-                            <td>{row.medication?.patients || 'N/A'}</td>
+                            <td>{row.medication?.medName || '0'}</td>
+                            <td>{row.medication?.simpleGenericName || '0'}</td>
+                            <td>{row.medication?.route || '0'}</td>
+                            <td>{row.medication?.outpatients || '0'}</td>
+                            <td>{row.medication?.inpatients || '0'}</td>
+                            <td>{row.medication?.patients || '0'}</td>
                         </tr>
                         {expandedRows.has(index) && (
                             <tr className="expanded-row">
@@ -131,23 +131,23 @@ const FullJoinTable: React.FC = () => {
                                         <strong>Medication ID:</strong> {row.medicationId}
                                     </div>
                                     <div>
-                                        <strong>Medication Name:</strong> {row.medication?.medName || 'N/A'}
+                                        <strong>Medication Name:</strong> {row.medication?.medName || '0'}
                                     </div>
                                     <div>
                                         <strong>Simple Generic
-                                            Name:</strong> {row.medication?.simpleGenericName || 'N/A'}
+                                            Name:</strong> {row.medication?.simpleGenericName || '0'}
                                     </div>
                                     <div>
-                                        <strong>Route:</strong> {row.medication?.route || 'N/A'}
+                                        <strong>Route:</strong> {row.medication?.route || '0'}
                                     </div>
                                     <div>
-                                        <strong>Outpatients:</strong> {row.medication?.outpatients || 'N/A'}
+                                        <strong>Outpatients:</strong> {row.medication?.outpatients || '0'}
                                     </div>
                                     <div>
-                                        <strong>Inpatients:</strong> {row.medication?.inpatients || 'N/A'}
+                                        <strong>Inpatients:</strong> {row.medication?.inpatients || '0'}
                                     </div>
                                     <div>
-                                        <strong>Patients:</strong> {row.medication?.patients || 'N/A'}
+                                        <strong>Patients:</strong> {row.medication?.patients || '0'}
                                     </div>
                                 </td>
                             </tr>

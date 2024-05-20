@@ -86,12 +86,15 @@ const CompareValueSets: React.FC = () => {
                             checked={selectedValueSetIds.includes(vs.valueSetId)}
                             onChange={handleValueSetChange}
                         />
-                        <label htmlFor={vs.valueSetId}>{vs.valueSetName}</label>
+                        <label htmlFor={vs.valueSetId}>
+                            <strong>{vs.valueSetId}</strong> | {vs.valueSetName}
+                        </label>
+
                     </div>
                 ))}
             </div>
             <div className="control-buttons">
-                <button onClick={handleCompare}>Compare Selected Value Sets</button>
+            <button onClick={handleCompare}>Compare Selected Value Sets</button>
                 <button onClick={handleClear}>Clear</button>
             </div>
 
