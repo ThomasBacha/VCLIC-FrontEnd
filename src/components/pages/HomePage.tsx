@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <p>
                     If you’re interested, you can read this paper we wrote to learn a bit more about this problem:
-                    <a href="https://academic.oup.com/jamia/article/25/11/1552/5105792" target="_blank"
+                    <a href="https://academic.oup.com/jamia/article/25/11/1552/5060240" target="_blank"
                        rel="noopener noreferrer">
                         Smashing the strict hierarchy: three cases of clinical decision support malfunctions involving
                         carvedilol.
