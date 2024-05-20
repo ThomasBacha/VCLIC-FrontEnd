@@ -1,7 +1,7 @@
 // src/pages/HomePage.tsx
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome CSS
-import '../css/HomePage.css'; // Import the CSS file for styling
+import '../css/HomePage.css';
 
 const HomePage: React.FC = () => {
     return (

@@ -1,21 +1,21 @@
 /* src/css/NavBar.css */
 nav {
     background-color: #333;
-    padding: 5px; /* Minimal padding */
+    padding: 5px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it is above other content */
+    z-index: 1000;
     display: flex;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-buttons {
     display: flex;
-    gap: 10px; /* Gap between buttons */
-    align-items: center; /* Align items vertically */
+    gap: 10px;
+    align-items: center;
 }
 
 .nav-buttons button {
@@ -23,30 +23,30 @@ nav {
     border: none;
     color: white;
     cursor: pointer;
-    font-size: 0.875rem; /* Adjusted font size for better readability */
+    font-size: 0.875rem;
     text-decoration: none;
-    padding: 8px 15px; /* Slightly increased padding */
-    line-height: 1.2; /* Adjusted line height */
+    padding: 8px 15px;
+    line-height: 1.2;
     transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-    border-radius: 5px; /* Rounded corners for better appearance */
-    font-family: 'Inter', sans-serif; /* Custom font for better aesthetics */
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-buttons button:hover {
-    color: #FFD700; /* Vanderbilt Gold */
+    color: #FFD700;
     background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px); /* Slight lift effect on hover */
+    transform: translateY(-2px);
 }
 
 .nav-buttons button:active {
-    transform: translateY(1px); /* Slight press effect on click */
+    transform: translateY(1px);
 }
 
 .nav-buttons button:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5); /* Focus ring for accessibility */
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
 }
 
 .nav-buttons button.active {
-    background-color: rgba(255, 215, 0, 0.2); /* Active state background */
+    background-color: rgba(255, 215, 0, 0.2);
 }

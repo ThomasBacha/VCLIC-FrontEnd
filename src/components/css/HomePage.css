@@ -8,7 +8,7 @@
     align-items: center;
     padding: 20px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-family: 'Montserrat', sans-serif;
     color: #333;
 }
 
@@ -24,7 +24,7 @@
 .homepage-title {
     font-size: 2rem;
     font-weight: 700;
-    color: #003057; /* Vanderbilt Navy */
+    color: #003057;
     margin-bottom: 20px;
 }
 
@@ -45,17 +45,17 @@
 }
 
 .homepage-content a {
-    color: #D4AF37; /* Vanderbilt Gold */
+    color: #D4AF37;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .homepage-content a:hover {
-    color: #FFEC8B; /* Lighter Gold */
+    color: #FFEC8B;
 }
 
 .footer {
     margin-top: 20px;
     font-size: 0.8rem;
-    color: #003057; /* Vanderbilt Navy */
+    color: #003057;
 }

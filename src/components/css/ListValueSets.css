@@ -1,10 +1,10 @@
 /* src/css/ListValueSets.css */
 
 :root {
-    --primary-color: #003057; /* Vanderbilt Navy */
-    --secondary-color: #D4AF37; /* Vanderbilt Gold */
+    --primary-color: #003057;
+    --secondary-color: #D4AF37;
     --background-color: #D4AF37;
-    --hover-background-color: #e69138; /* Complementary highlight */
+    --hover-background-color: #e69138;
     --text-color: #ffffff;
 }
 
